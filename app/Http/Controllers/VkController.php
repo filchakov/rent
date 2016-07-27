@@ -27,7 +27,7 @@ class VkController extends Controller
          * https://oauth.vk.com/authorize?client_id=5550387&redirect_uri=https://rent.local/kiev/vk&display=page&scope=groups
          *
          *
-         * https://oauth.vk.com/access_token?client_id=5550387&client_secret=52dLOFHQTKwDztYT4lry&code=34f6a90dfc1d1df4b0&redirect_uri=https://rent.local/kiev/vk
+         * https://oauth.vk.com/access_token?client_id=5550387&client_secret=52dLOFHQTKwDztYT4lry&code=e63c7129460f873ddd&redirect_uri=https://rent.local/kiev/vk
          *
         {
             access_token: "6a6f0076cb487abde8d51c5ffc06ab53be5db57079063a958ffb3f7527f7ac7b1dbc990115c5282fdfc02",
