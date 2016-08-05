@@ -164,7 +164,7 @@
         </exec>
     </target>
 
-    <target name="phpunit" depends="migrate" description="Run unit tests with PHPUnit">
+    <target name="phpunit" description="Run unit tests with PHPUnit">
         <exec executable="phpunit" failonerror="true">
             <arg value="-c" />
             <arg value="${basedir}/phpunit.xml" />
