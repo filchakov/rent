@@ -215,13 +215,13 @@
     </target>
 
     <target name="migrate" >
-        <exec logoutput="true" command="${php_bin_path}php artisan migrate --bench='einstein/item'" />
-        <exec logoutput="true" command="${php_bin_path}php artisan migrate --bench='einstein/product'" />
-        <exec logoutput="true" command="${php_bin_path}php artisan migrate --bench='einstein/service'" />
-        <exec logoutput="true" command="${php_bin_path}php artisan migrate --bench='einstein/batch'" />
-        <exec logoutput="true" command="${php_bin_path}php artisan migrate --bench='einstein/template'" />
-        <exec logoutput="true" command="${php_bin_path}php artisan migrate --bench='einstein/imprint'" />
-        <exec logoutput="true" command="${php_bin_path}php artisan migrate" />
+        <exec failonerror="true" command="${php_bin_path}php artisan migrate --bench='einstein/item'" />
+        <exec failonerror="true" command="${php_bin_path}php artisan migrate --bench='einstein/product'" />
+        <exec failonerror="true" command="${php_bin_path}php artisan migrate --bench='einstein/service'" />
+        <exec failonerror="true" command="${php_bin_path}php artisan migrate --bench='einstein/batch'" />
+        <exec failonerror="true" command="${php_bin_path}php artisan migrate --bench='einstein/template'" />
+        <exec failonerror="true" command="${php_bin_path}php artisan migrate --bench='einstein/imprint'" />
+        <exec failonerror="true" command="${php_bin_path}php artisan migrate" />
     </target>
 
 </project>
