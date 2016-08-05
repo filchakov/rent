@@ -214,8 +214,4 @@
         <mkdir dir="${basedir}/build/pdepend" />
     </target>
 
-    <target name="migrate" >
-        <exec failonerror="true" command="${php_bin_path}php artisan migrate" />
-    </target>
-
 </project>
