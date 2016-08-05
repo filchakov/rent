@@ -20,7 +20,7 @@
     <target name="build-parallel-clean"
             depends="clean,build-common,tools-parallel" />
 
-    <target name="build-common" depends="lint,prepare,storage-permissions,composer,phpunit" />
+    <target name="build-common" depends="lint,prepare,storage-permissions,composer" />
 
     <target name="tools-parallel" description="Run tools in parallel">
         <parallel threadCount="2">
@@ -161,15 +161,6 @@
             <arg value="${basedir}/build/phpmd.xml" />
             <arg value="--reportfile" />
             <arg value="${basedir}/build/logs/pmd.xml" />
-        </exec>
-    </target>
-
-    <target name="phpunit" description="Run unit tests with PHPUnit">
-        <exec executable="phpunit" failonerror="true">
-            <arg value="-c" />
-            <arg value="${basedir}/phpunit.xml" />
-            <arg value="--coverage-html" />
-            <arg value="${basedir}/build/coverage" />
         </exec>
     </target>
 
