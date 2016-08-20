@@ -43,7 +43,7 @@ abstract class AbstractVkClient implements IProvider
             'count' => $this->getCount(),
             'offset' => $this->getOffset(),
             'lang' => self::LANG,
-            'access_token' => '6954323cae6ec55d5e91a7d162507f5b200a0c1d24701d13b1d14ae4b0f98421d0aecf46aace2f2082235'
+            'access_token' => 'e43ef44b9c08baec43a1ec5e3ebaf51fe7f1220cc338094735ec7aa149a8cec409bb32cc0074a1b0f19bc'
         ];
     }
 

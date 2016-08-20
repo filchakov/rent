@@ -58,10 +58,10 @@ class VkParser extends Command
                 $this->error('City ' . $this->argument('city') . ' not found');
                 die;
             }
+        } else {
+            $this->error('City empty');
+            die;
         }
-
-        //$boards = $donors->getBoardsVk()->get();
-        //$walls = $donors->getWallsVk()->get();
 
         $this->info('Parsing board');
 
