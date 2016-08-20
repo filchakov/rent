@@ -6,6 +6,7 @@ use GuzzleHttp\Client;
 use Illuminate\Support\Collection;
 use Modules\ParserModule\Contract\IProvider;
 use Modules\ParserModule\Models\Lead;
+use Log;
 
 abstract class AbstractVkClient implements IProvider
 {
@@ -42,7 +43,7 @@ abstract class AbstractVkClient implements IProvider
             'count' => $this->getCount(),
             'offset' => $this->getOffset(),
             'lang' => self::LANG,
-            'access_token' => '6b5f76d9f17bd0b69e881ffdb746c6bd76f57efe4e501b8d9521487851a8bc52b2f1498be4632ebab5d3a'
+            'access_token' => '6954323cae6ec55d5e91a7d162507f5b200a0c1d24701d13b1d14ae4b0f98421d0aecf46aace2f2082235'
         ];
     }
 
@@ -58,7 +59,14 @@ abstract class AbstractVkClient implements IProvider
             'query' => $this->getQuery()
         ])->getBody()->getContents();
 
-        $result = json_decode($result, 1)['response'];
+        try{
+            $result = json_decode($result, 1)['response'];
+        } catch (\Exception $e){
+
+            Log::warning('#VK,' . $result);
+
+            $result = [];
+        }
 
         return $result;
     }

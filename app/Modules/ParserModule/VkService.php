@@ -44,10 +44,8 @@ class VkService
     }
 
 
-    public function getBoards()
+    public function getBoards($boardsDonors, $callback)
     {
-        $boardsDonors = Donor::getBoardsVk();
-
         $total_row = 0;
 
         foreach($boardsDonors as $key => $orderBoards){
@@ -63,6 +61,8 @@ class VkService
             $orderBoards->save();
 
             $total_row += count($resultLeads);
+
+            functionCallback();
         }
 
 
@@ -95,7 +95,7 @@ class VkService
     /**
      * @return VkWallClient
      */
-    protected function getWallsClient()
+    public function getWallsClient()
     {
         return $this->wallsClient;
     }
@@ -113,7 +113,7 @@ class VkService
     /**
      * @return VkBoardsClient
      */
-    protected function getBoardsClient()
+    public function getBoardsClient()
     {
         return $this->boardsClient;
     }
@@ -136,7 +136,7 @@ class VkService
         return $this;
     }
 
-    private function saveLeads($order, $getLeads = [])
+    public function saveLeads($order, $getLeads = [])
     {
 
         foreach($getLeads as $lead){

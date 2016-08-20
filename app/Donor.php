@@ -11,24 +11,20 @@ class Donor extends Model
     /**
      * @return Collection
      */
-    public static function getWallsVk(){
-        $result = new Donor();
-
-        return $result->where([
+    public function getWallsVk(){
+        return $this->where([
                 'provider' => 'vk',
                 'type' => 'wall'
-            ])->get();
+        ]);
     }
 
     /**
      * @return Collection
      */
-    public static function getBoardsVk(){
-        $result = new Donor();
-
-        return $result->where([
+    public function getBoardsVk(){
+        return $this->where([
             'provider' => 'vk',
             'type' => 'board'
-        ])->get();
+        ]);
     }
 }

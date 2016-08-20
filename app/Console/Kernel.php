@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\VkParser;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -13,7 +14,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        // Commands\Inspire::class,
+        'App\Console\Commands\VkParser',
+        'App\Console\Commands\LunParser'
     ];
 
     /**

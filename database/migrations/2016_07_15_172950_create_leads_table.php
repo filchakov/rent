@@ -28,7 +28,7 @@ class CreateLeadsTable extends Migration
             $table->timestamp('disable_lead_time')->nullable();
             $table->integer('count_prolong')->default(1);
 
-            $table->timestamp('checkin_time')->default(0);
+            $table->timestamp('checkin_time')->default(NULL);
 
             $table->integer('count_adult_people')->default(1);
             $table->integer('with_children')->default(0);
